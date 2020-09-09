@@ -1,0 +1,21 @@
+<div class="banners-component" [class.hidden]="loading">
+  <div class="slider" #slider>
+    <div class="slide" *ngFor="let banner of data">
+      <img
+        src="assets/images/{{ banner.imgUrl }}"
+        (click)="clickGame(banner)"
+        class="img-responsive"
+        alt=""
+      />
+
+      <!-- <div class="timer text-center" *ngIf='banner.startTime'>
+        <div class="game-start">
+          Game Starts in
+        </div>
+        {{ displayTime.hours }}:{{displayTime.minutes}}:{{displayTime.seconds}}
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<app-loader *ngIf="loading"></app-loader>

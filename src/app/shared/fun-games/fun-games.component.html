@@ -1,0 +1,17 @@
+<div class="fun-games-list-component">
+  <div class="header">
+    <div class="title">
+      Fun Games
+    </div>
+  </div>
+
+  <div class="list-content">
+    <div id="tpgame" class="game" *ngFor="let game of data" (click)="launchGame(game)">
+      <div class="img-wrap">
+        <img src="{{ game.imgUrl }}" alt="" />
+      </div>
+      <div class="desc">{{ game.desc }}</div>
+      <div class="title">{{ game.title }}</div>
+    </div>
+  </div>
+</div>

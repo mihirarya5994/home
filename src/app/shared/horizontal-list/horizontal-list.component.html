@@ -1,0 +1,86 @@
+<div class="horizonatl-list-component" [class.hidden]="source === 'dashboard' || showFavouriteApps">
+    <div class="header">
+      <div class="title">
+        Recommended for you
+      </div>
+  
+      <div class="text">
+        see more
+      </div>
+    </div>
+  
+    <div class="list-content">
+      <div class="game" *ngFor="let game of data" (click)="likeApp(game)">
+        <div class="img-wrap">
+          <img src="{{ game.imgUrl }}" alt="" />
+          <div class="like-img">
+            <img src="assets/images/Fav_marked.png" *ngIf="!game.liked" alt="" />
+            <img src="assets/images/fav.png" *ngIf="game.liked" alt="" />
+          </div>
+        </div>
+        <div class="title" (click)="launchGame(game)">{{ game.title }}</div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- liked apps list -->
+  
+  <div class="horizonatl-list-component" *ngIf="showFavouriteApps">
+    <div class="liked-apps-list">
+      <div class="header">
+        <div class="title">
+          Favourites
+        </div>
+  
+        <div class="text" *ngIf="likedApps.length">
+          see more
+        </div>
+      </div>
+  
+      <div class="list-content" *ngIf="likedApps.length">
+        <div class="game" *ngFor="let game of likedApps" (click)="launchGame(game)">
+          <div class="img-wrap">
+            <img src="{{ game.imgUrl }}" alt="" />
+          </div>
+          <div class="title">{{ game.title }}</div>
+        </div>
+      </div>
+  
+      <div class="list-content" *ngIf="!likedApps.length">
+        <div class="text">
+          Click on a Game under “RECOMMENDED FOR YOU” to add to FAVOURITES
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- engage apps list according to category -->
+  
+  <div
+    class="horizonatl-list-component"
+    [class.isDashBoard]="source === 'dashboard'"
+    [class.hidden]="source !== 'dashboard' || showFavouriteApps"
+  >
+    <div class="engageItems">
+      <div
+        class="buttonItems"
+        *ngFor="let game of engageItems"
+        [class.active]="selectedItem == game.id"
+        (click)="clickItem(game.id, game.atag)"
+      >
+        {{ game.topic }}
+      </div>
+    </div>
+  
+    <div class="slider">
+      <div class="slide" *ngFor="let game of filteredApps" (click)="launchGame(game)">
+        <!-- <div class="prize-text">win prizes upto 50000</div> -->
+        <div class="img">
+          <img [src]="game.imgUrl" alt="" />
+        </div>
+        <div class="title">{{ game.title }}</div>
+        <div class="description">{{ game.description }}</div>
+      </div>
+    </div>
+  </div>
+  

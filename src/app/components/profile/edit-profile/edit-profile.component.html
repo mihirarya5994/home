@@ -1,0 +1,70 @@
+<div class="edit-profile-component" *ngIf="!loading">
+  <div class="profile-wrap">
+    <div class="profile-content">
+      <div class="profile-image">
+        <div class="img-wrap">
+          <img src="assets/images/avatars/{{ profileDetails?.avatar || 'default_male.jpg' }}" />
+        </div>
+      </div>
+      <div class="profile-details">
+        <div class="profile-name" *ngIf="profileDetails?.nickName">
+          {{ profileDetails.nickName }}
+        </div>
+        <div class="profile-joined">
+          Just Joined
+        </div>
+      </div>
+    </div>
+
+    <div class="edit-btn" (click)="editProfile()">
+      <button>Edit</button>
+    </div>
+  </div>
+
+  <div class="total-xp">
+    <div class="title">
+      <div class="header">
+        <div class="text">
+          Total XP <span class="points">{{ profileDetails?.totalPoints }}</span>
+        </div>
+      </div>
+      <!-- <div class="border" *ngIf="showXpDetails"></div> -->
+      <div class="details" *ngIf="showXpDetails">
+        <div class="details-wrap">
+          <p>
+            XP Stands for Experience Points - these are collected after each game you play,
+            regardless of the final outcome.
+          </p>
+          <p>
+            When you collect enough XP, you will gain a level. You can see your progress towards the
+            next level.
+          </p>
+
+          <p>
+            You can convert XP into Prime Points to purchase from JioPrime.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="play-text">
+      <div class="text" *ngIf="!showXpDetails">
+        Play games to <span style="font-weight: bold; text-transform: uppercase;"> earn xp</span>
+      </div>
+      <div class="playnow" *ngIf="showXpDetails">play now</div>
+      <div class="info-img" (click)="showDetails()">
+        <img src="assets/images/info.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="recommended-games profile-data">
+    <app-vertical-list [data]="data.info"></app-vertical-list>
+  </div>
+  <div class="recommended-games">
+    <app-horizontal-list [data]="data.recommended"></app-horizontal-list>
+  </div>
+</div>
+
+<div class="edit-profile-component" *ngIf="loading">
+  <app-loader></app-loader>
+</div>

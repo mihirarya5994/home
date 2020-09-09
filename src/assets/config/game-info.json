@@ -1,0 +1,32 @@
+{
+  "info": [
+    {
+      "imgUrl": "assets/images/simmba.png",
+      "title": "simmba quiz",
+      "level": "cleared level2",
+      "points": "100xp",
+      "iconFav":"assets/images/Fav_marked.png",
+      "appId": "sq"
+    },
+    {
+      "imgUrl": "assets/images/zero.png",
+      "title": "Zero quiz",
+      "level": "cleared level2",
+      "points": "100xp",
+      "iconFav":"assets/images/Fav_marked.png",
+      "appId": "zq"
+    }
+  ],
+  "points": [
+    {
+      "top": "points",
+      "bottom": "Earned",
+      "points": 1200
+    },
+    {
+      "top": "Badges",
+      "bottom": "Earned",
+      "points": 1200
+    }
+  ]
+}

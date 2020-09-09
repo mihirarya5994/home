@@ -1,0 +1,170 @@
+<div class="settings-component">
+  <div class="profile-details">
+    <div class="profile-image">
+      <div class="img-wrap">
+        <img src="assets/images/avatars/{{ avatar || 'default_male.jpg' }}" />
+      </div>
+
+      <div class="edit-image-wrap" (click)="toggleAvatarSelectionPopup()">
+        <img src="assets/images/Upload_Profile_photo.png" alt="" />
+      </div>
+    </div>
+    <div class="profile-form">
+      <form [formGroup]="profileForm" novalidate (submit)="submitProfile()">
+        <div class="profile-content">
+          <div class="nickname">
+            <label for="">nickname</label>
+            <div class="values" *ngIf="!inputField">
+              <div class="value">
+                {{ profileDetails?.nickName }}
+              </div>
+              <div class="img-wrap" (click)="showInpuField()">
+                <img src="assets/images/edit.png" alt="" />
+              </div>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="nickName"
+              placeholder="I would love if you call me "
+              *ngIf="inputField"
+            />
+            <div class="err" *ngIf="submitted && profileForm.controls.nickName.errors?.required">
+              Please enter a valid nickname.
+            </div>
+            <div class="err" *ngIf="submitted && profileForm.controls.nickName.errors?.pattern">
+              Please enter a valid Nickname.
+            </div>
+            <div class="err" *ngIf="submitted && profileForm.controls.nickName.errors?.maxlength">
+              Nickname cannot be longer than 8 characters.
+            </div>
+            <div class="err" *ngIf="submitted && profileForm.controls.nickName.errors?.minlength">
+              Nickname cannot be less than 2 characters.
+            </div>
+          </div>
+
+          <div class=" info-content">
+            <div class="gender">
+              <label for="">Gender</label>
+
+              <select
+                name="gender"
+                aria-placeholder="I am"
+                formControlName="gender"
+                class="form-control selectpicker show-tick"
+                id=""
+              >
+                <!-- <option value="" disabled selected>I am</option> -->
+                <option value="{{ gender.value }}" *ngFor="let gender of genders">{{
+                  gender.title
+                }}</option>
+              </select>
+              <div class="err" *ngIf="submitted && profileForm.controls.ageGroup.errors?.required">
+                Please select your Gender.
+              </div>
+            </div>
+            <div class="age">
+              <label for="">Age</label>
+
+              <select
+                name="age"
+                formControlName="ageGroup"
+                class="form-control selectpicker show-tick"
+                id=""
+              >
+                <!-- <option value="" disabled selected>Age group</option> -->
+                <option value="{{ age.value }}" *ngFor="let age of ageGroups">{{
+                  age.value
+                }}</option>
+              </select>
+              <div class="err" *ngIf="submitted && profileForm.controls.ageGroup.errors?.required">
+                Please select your age group.
+              </div>
+            </div>
+          </div>
+          <div class="state">
+            <label for="">state</label>
+
+            <select name="state" formControlName="state" id="">
+              <!-- <option value="" disabled selected>My State</option> -->
+              <option value="{{ state.value }}" *ngFor="let state of states">{{
+                state.value
+              }}</option>
+            </select>
+            <div class="err" *ngIf="submitted && profileForm.controls.ageGroup.errors?.required">
+              Please select your state.
+            </div>
+          </div>
+        </div>
+
+        <div class="submit">
+          <button type="submit" [disabled]="submitted && !profileForm.valid" (click)="save()">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <app-avatar-selection
+    *ngIf="showAvatarSelectionPopup"
+    (close)="toggleAvatarSelectionPopup()"
+  ></app-avatar-selection>
+  <!-- <div class="general-settings">
+    <div class="title">general settings</div>
+    <div class="settings-block">
+      <div class="setting">
+        <div class="left">Sound</div>
+        <div class="right">
+          <div class="switch-wrap">
+            <label class="switch">
+              <input type="checkbox" (change)="toggleSound()" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="setting">
+        <div class="left">Choose your preferred language</div>
+        <div class="right">
+          <div class="text">English</div>
+        <div class="img-wrap"><img src="assets/images/settings_arrow.png" /></div> -->
+  <!-- </div>
+      </div>
+    </div>
+  </div> -->
+<!-- 
+  <div class="more-options">
+    <div class="title">Languages</div>
+    <div class="settings-block"> -->
+      <!-- <div class="setting" (click)="launchUrl('how-to-play')">
+        <div class="left">How to Play?</div>
+        <div class="right">
+          <div class="img-wrap"><img src="assets/images/settings_arrow.png" /></div>
+        </div>
+      </div>
+      <div class="setting" (click)="launchUrl('faq')">
+        <div class="left">FAQ</div>
+        <div class="right">
+          <div class="img-wrap"><img src="assets/images/settings_arrow.png" /></div>
+        </div>
+      </div>
+      <div class="setting" (click)="launchUrl('tnc')">
+        <div class="left">Terms & Conditions</div>
+        <div class="right">
+          <div class="img-wrap"><img src="assets/images/settings_arrow.png" /></div>
+        </div>
+      </div> -->
+      <!-- <div class="setting" (click)="launchUrl('invite')">
+        <div class="left">Invite Friends</div>
+        <div class="right">
+          <div class="img-wrap"><img src="assets/images/settings_arrow.png" /></div>
+        </div>
+      </div> -->
+      <!-- <div class="languages-block">
+          Choose your preferred language <span class="active-language">English</span> 
+      </div>
+
+    </div>
+  </div> -->
+</div>

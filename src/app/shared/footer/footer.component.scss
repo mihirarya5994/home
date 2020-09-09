@@ -1,0 +1,55 @@
+@import '~src/assets/styles/helpers/mixins';
+
+.footer-component {
+  width: 100%;
+  position:absolute;
+  border-top: 1px solid #e7e7e7;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 0px;
+  height: 4rem;
+  background: #fff;
+  // z-index: 2;
+  &.isAndroid {
+    bottom: 52.5px;
+  }
+  &.isIos {
+    bottom: 0;
+  }
+
+  .footer-item {
+    // flex: 1;
+    text-align: center;
+    height: 100%;
+    @include flex-container(center);
+    flex-direction: column;
+    position: relative;
+    .coupons-count {
+      position: absolute;
+      top: 5px;
+      right: 1.5rem;
+      color: black;
+      background: #f4a100;
+      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      align-items: CENTER;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+    .img-wrap {
+      height: 45%;
+    }
+    .title {
+      color: #afaeb4;
+      text-transform: uppercase;
+      font-size: 0.55rem;
+      font-weight: 600;
+      &.active {
+        color: #5401A5;
+      }
+    }
+  }
+}

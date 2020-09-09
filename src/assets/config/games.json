@@ -1,0 +1,284 @@
+{
+  "thirdPartyGames": [
+    {
+      "imgUrl": "assets/images/tp-games-banners/PopTheBall.png",
+      "title": "Pop the Ball",
+      "desc": "",
+      "id": "Pop the Ball",
+      "linkPosition": "1",
+      "assetPath": "https://jioplayalong2.akamaized.net/ballPop/index.html"
+    },
+    {
+      "imgUrl": "assets/images/tp-games-banners/CoronaHeros_Thumb.png",
+      "title": "CoronaHeros",
+      "desc": "",
+      "id": "CoronaHeros",
+      "linkPosition": "2",
+      "assetPath": "https://jioplayalong2.akamaized.net/coronaHeros/index.html"
+    },
+    {
+      "imgUrl": "assets/images/tp-games-banners/Jio_Thumb_CoronaStricker.jpg",
+      "title": "CoronaStricker",
+      "desc": "",
+      "id": "CoronaStricker",
+      "linkPosition": "3",
+      "assetPath": "https://jioplayalong2.akamaized.net/coronaStricker/index.html"
+    },
+    {
+      "imgUrl": "assets/images/tp-games-banners/Jio_Thumb_2048.png",
+      "title": "2048",
+      "desc": "",
+      "id": "2048",
+      "linkPosition": "4",
+      "assetPath": "assets/tp-games/2048/index.html"
+    },
+    {
+      "imgUrl": "assets/images/tp-games-banners/Jio_Thumb_Blackjack.png",
+      "title": "Vlack Jack",
+      "desc": "",
+      "id": "vlackJack",
+      "linkPosition": "5",
+      "assetPath": "assets/tp-games/vlackjack/index.html"
+    },
+    {
+      "imgUrl": "assets/images/tp-games-banners/Jio_Thumb_TicTacToe.png",
+      "title": "Tic-Tac-Toe",
+      "desc": "",
+      "id": "tic-tac-toe",
+      "linkPosition": "6",
+      "assetPath": "assets/tp-games/tic-tac-toe/index.html"
+    }
+  ],
+
+  "latestGames": [
+    {
+      "imgUrl": "Silk_Web.png",
+      "title": "Say I Missed You",
+      "description": "",
+      "id": "1",
+      "linkName": "Say I Missed You",
+      "url": "https://www.jio.com/redirectToNativeApp.jsp?i=myjio://com.jio.myjio/app10&a=/app10&jioipl=jioipl"
+    },
+    {
+      "imgUrl": "Tambola_new.png",
+      "title": "Tambola",
+      "description": "",
+      "id": "2",
+      "linkName": "Tambola",
+      "url": "https://www.jio.com/redirectToNativeApp.jsp?i=myjio://com.jio.myjio/app14&a=/app14&jioipl=jioipl"
+    },
+    {
+      "imgUrl": "Ultratech.png",
+      "title": "Ultratech Cement",
+      "description": "",
+      "id": "3",
+      "linkName": "Ultratech Cement",
+      "url": "https://www.jio.com/redirectToNativeApp.jsp?i=myjio://com.jio.myjio/app21&a=/app21&jioipl=jioipl"
+    },
+    {
+      "imgUrl": "Jio_Hero_MT.png",
+      "title": "Mahindra Tractors",
+      "description": "",
+      "id": "4",
+      "linkName": "Mahindra XP Plus",
+      "url": "https://www.jio.com/redirectToNativeApp.jsp?i=myjio://com.jio.myjio/app9&a=/app9&jioipl=jioipl"
+    },
+    {
+      "imgUrl": "CoronaHeros.png",
+      "title": "CoronaHeros",
+      "description": "",
+      "id": "5",
+      "linkName": "CoronaHeros",
+      "url": "https://jioplayalong2.akamaized.net/coronaHeros/index.html"
+    }
+
+  ],
+  "recommended": [
+    {
+      "imgUrl": "assets/images/Thumbnails/Silk_Thumb.png",
+      "title": "Say I Missed You",
+      "appId": "Hul",
+      "description": "Invite.Play.Win",
+      "linkName": "Say I Missed You",
+      "url": "https://www.jio.com/redirectToNativeApp.jsp?i=myjio://com.jio.myjio/app10&a=/app10&jioipl=jioipl",
+      "category": ["all", "games"],
+      "engagements": [1]
+    },
+    {
+      "imgUrl": "assets/images/Thumbnails/tambola.png",
+      "title": "Tambola",
+      "appId": "Hul",
+      "description": "Play and Win Daily",
+      "linkName": "Tambola",
+      "url": "https://www.jio.com/redirectToNativeApp.jsp?i=myjio://com.jio.myjio/app14&a=/app14&jioipl=jioipl",
+      "category": ["all", "games"],
+      "engagements": [1,6]
+    },
+    {
+      "imgUrl": "assets/images/Thumbnails/Ultratech_Thumb.png",
+      "title": "Ultratech Cement",
+      "appId": "uc",
+      "description": "#BaatGharKi",
+      "linkName": "Ultratech Cement",
+      "url": "https://www.jio.com/redirectToNativeApp.jsp?i=myjio://com.jio.myjio/app21&a=/app21&jioipl=jioipl",
+      "category": ["all", "games"],
+      "engagements": [4]
+    },
+    {
+      "imgUrl": "assets/images/Thumbnails/Jio_Thumb_Mahindra_Tractors.png",
+      "title": "Mahindra Tractors",
+      "appId": "md",
+      "description": "XP Plus",
+      "linkName": "Mahindra XP Plus",
+      "url": "https://www.jio.com/redirectToNativeApp.jsp?i=myjio://com.jio.myjio/app9&a=/app9&jioipl=jioipl",
+      "category": ["all", "games"],
+      "engagements": [4]
+    },
+    {
+      "imgUrl": "assets/images/Thumbnails/Jio_Thumb_Wheel.png",
+      "title": "Ghar Se Career",
+      "appId": "Hul",
+      "description": "Win & Learn",
+      "linkName": "Ghar Se Career",
+      "url": "https://www.jio.com/redirectToNativeApp.jsp?i=myjio://com.jio.myjio/app11&a=/app11&jioipl=jioipl",
+      "category": ["all", "games"],
+      "engagements": [4]
+    },
+    {
+      "imgUrl": "assets/images/Thumbnails/Jio_Thumb_Mountain_Dew.png",
+      "title": "Mountain Dew",
+      "appId": "md",
+      "description": "#RiskUthaNaamBana",
+      "linkName": "Mountain Dew",
+      "url": "https://www.jio.com/redirectToNativeApp.jsp?i=myjio://com.jio.myjio/app3&a=/app3&jioipl=jioipl",
+      "category": ["all", "games"],
+      "engagements": [4]
+    },
+    {
+      "imgUrl": "assets/images/Thumbnails/Jio_Thumb_Asian_Paints.png",
+      "title": "Asian Paints Shyne",
+      "appId": "ap",
+      "description": "Shyne Andar Shyne Bahar",
+      "linkName": "Asian Paints Shyne",
+      "url": "https://www.jio.com/redirectToNativeApp.jsp?i=myjio://com.jio.myjio/shyne&a=/shyne&jioipl=jioipl",
+      "category": ["all", "games"],
+      "engagements": [4]
+    },
+    {
+      "imgUrl": "assets/images/Thumbnails/Jio_Thumb_MIC_Bot.png",
+      "title": "MIC BOT",
+      "appId": "mic",
+      "description": "Video Call with Rajkumar about MADE IN CHINA",
+      "linkName": "Mic BOT",
+      "boturl": "https://www.jio.com/redirectToNativeApp.jsp?i=myjio://com.jio.myjio/open_mic&a=/open_mic",
+      "category": ["all", "games"],
+      "engagements": [5]
+    },
+    {
+      "imgUrl": "assets/images/Thumbnails/Jio_Thumb_AxisBank_BOT.png",
+      "title": "Loan BOT",
+      "appId": "dp",
+      "description": "Know about Loans for your needs",
+      "linkName": "Loan BOT",
+      "boturl": "https://www.jio.com/redirectToNativeApp.jsp?i=myjio://com.jio.myjio/loan_genie&a=/loan_genie",
+      "category": ["all", "games"],
+      "engagements": [5]
+    }
+  ],
+  "engagements": [
+    {
+      "id": "1",
+      "atag": "Trending",
+      "topic": "Trending"
+    },
+    {
+      "id": "4",
+      "atag": "Brands",
+      "topic": "Brands"
+    },
+    {
+      "id": "5",
+      "atag": "Interact",
+      "topic": "Interact"
+    },
+    {
+      "id": "6",
+      "atag": "Special",
+      "topic": "Special"
+    }
+  ],
+  "avatars": [
+    {
+      "id": 1,
+      "imgUrl": "default_male.jpg"
+    },
+    {
+      "id": 2,
+      "imgUrl": "default_female.jpg"
+    },
+    {
+      "id": 3,
+      "imgUrl": "csk_f.png"
+    },
+    {
+      "id": 4,
+      "imgUrl": "csk.png"
+    },
+    {
+      "id": 5,
+      "imgUrl": "dc_f.png"
+    },
+    {
+      "id": 6,
+      "imgUrl": "dc.png"
+    },
+    {
+      "id": 7,
+      "imgUrl": "kkr_f.png"
+    },
+    {
+      "id": 8,
+      "imgUrl": "kkr.png"
+    },
+    {
+      "id": 9,
+      "imgUrl": "kxip_f.png"
+    },
+    {
+      "id": 10,
+      "imgUrl": "kxip.png"
+    },
+    {
+      "id": 11,
+      "imgUrl": "mi_f.png"
+    },
+    {
+      "id": 12,
+      "imgUrl": "mi.png"
+    },
+    {
+      "id": 13,
+      "imgUrl": "rcb_f.png"
+    },
+    {
+      "id": 14,
+      "imgUrl": "rcb.png"
+    },
+    {
+      "id": 15,
+      "imgUrl": "rr_f.png"
+    },
+    {
+      "id": 16,
+      "imgUrl": "rr.png"
+    },
+    {
+      "id": 17,
+      "imgUrl": "srh_f.png"
+    },
+    {
+      "id": 18,
+      "imgUrl": "srh.png"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+.fun-games-list-component {
+  width: 100%;
+  margin-bottom: 4%;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 7% 3% 0 3%;
+    .title {
+      // color: #707070;
+      font-weight: 700;
+      font-family: montserrat-bold;
+
+      color: #707070;
+    }
+
+    .text {
+      color: #029f08;
+    }
+  }
+
+  .list-content {
+    display: flex;
+
+    overflow-x: auto;
+
+    .game {
+      flex: 0 0 33%;
+      padding: 3%;
+
+      .img-wrap {
+        width: 100%;
+        position: relative;
+        // border-radius: 16px;
+        overflow: hidden;
+        img {
+          width: 7rem;
+          height: 7rem;
+          // .img-responsive {
+          //   width: 100%;
+          //   height: auto;
+          // }
+        }
+        .like-img {
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 1;
+          img {
+            z-index: -1;
+          }
+        }
+      }
+
+      .title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 12px;
+        margin-top: 5%;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        color: black;
+      }
+
+      .prize-text {
+        color: #00a69a;
+      }
+      .description {
+        margin-left: 8%;
+      }
+    }
+  }
+}
+
+// @media (min-width: 320px) and (max-height: 568px) {
+//   .fun-games-list-component {
+//     margin-top: 10%;
+//   }
+// }

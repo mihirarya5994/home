@@ -1,0 +1,96 @@
+@import '~src/assets/styles/helpers/mixins';
+
+// .splash-component {
+//   background: url('/assets/images/BG.png') no-repeat center center;
+//   height: 100%;
+//   width: 100%;
+//   color: white;
+//   background-size: 100% 100%;
+
+//   @include flex-container(space-between);
+//   flex-direction: column;
+//   .top {
+//     @include flex-container(space-around);
+//     flex-direction: column;
+//     font-family: montserrat-medium;
+//     margin-top: 1rem;
+//     .heading {
+//       font-size: 1.7rem;
+//       font-family: montserrat-Bold;
+//     }
+//     .text {
+//       background: url('/assets/images/strap.png') no-repeat center center;
+//       color: #58ff00;
+//       font-weight: 600;
+//       text-transform: uppercase;
+//       font-size: 1.4rem;
+//       font-family: 'montserrat-bold';
+//       font-style: italic;
+//       padding: 0 8px;
+//     }
+//     .desc {
+//       width: 68%;
+//       margin-top: 1rem;
+//       text-align: center;
+//       font-size: 1rem;
+
+//       .bold {
+//         font-family: montserrat-extraBold;
+//       }
+//     }
+//   }
+//   .slider {
+//     height: 30%;
+//     width: 60%;
+//     position: absolute;
+//     bottom: 23%;
+//     .slide {
+//       height: 100%;
+//       width: 100%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       flex-direction: column;
+//       .img-wrap {
+//         height: 100%;
+//         width: 100%;
+//       }
+
+//       .text {
+//         font-size: 1.45rem;
+//         font-weight: bold;
+//         font-style: italic;
+//         text-transform: uppercase;
+//         font-family: montserrat-extraBoldItalic;
+//         font-weight: 900;
+//       }
+//     }
+//   }
+//   .bottom {
+//     @include flex-container(center);
+//     flex-direction: column;
+//     width: 100%;
+//     .disclaimer {
+//       font-size: 0.8rem;
+//       margin-bottom: 10px;
+//       font-family: montserrat-medium;
+//       b {
+//         color: #58ff00;
+//         font-family: montserrat-Bold;
+//       }
+//     }
+//     .start-btn {
+//       background: linear-gradient(#00c708, #007c05);
+//       text-align: center;
+//       padding: 1rem;
+//       margin-bottom: 1rem;
+//       border-radius: 5px;
+//       width: 90%;
+//       text-transform: uppercase;
+//       font-family: montserrat-semiBold;
+//       /* font-weight: bold; */
+//       font-size: 1.2rem;
+//       letter-spacing: 1.5px;
+//     }
+//   }
+// }

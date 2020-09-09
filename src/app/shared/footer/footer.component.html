@@ -1,0 +1,9 @@
+<div class="footer-component" [class.isAndroid]="device === 'android'"
+[class.isIos]="device === 'ios'" >
+  <div class="footer-item" *ngFor="let nav of navList" (click)="navigate(nav)">
+    <div class="img-wrap">
+      <img src="assets/images/{{ activeItem?.route === nav.route ? nav.activeImgUrl : nav.imgUrl }}" />
+    </div>
+    <div class="title" [class.active]="activeItem?.route === nav.route">{{ nav.name }}</div>
+  </div>
+</div>

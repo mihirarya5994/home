@@ -1,0 +1,76 @@
+{
+  "avatars": [
+    {
+      "id": 1,
+      "imgUrl": "default_male.jpg"
+    },
+    {
+      "id": 2,
+      "imgUrl": "default_female.jpg"
+    },
+    {
+      "id": 3,
+      "imgUrl": "csk_f.png"
+    },
+    {
+      "id": 4,
+      "imgUrl": "csk.png"
+    },
+    {
+      "id": 5,
+      "imgUrl": "dc_f.png"
+    },
+    {
+      "id": 6,
+      "imgUrl": "dc.png"
+    },
+    {
+      "id": 7,
+      "imgUrl": "kkr_f.png"
+    },
+    {
+      "id": 8,
+      "imgUrl": "kkr.png"
+    },
+    {
+      "id": 9,
+      "imgUrl": "kxip_f.png"
+    },
+    {
+      "id": 10,
+      "imgUrl": "kxip.png"
+    },
+    {
+      "id": 11,
+      "imgUrl": "mi_f.png"
+    },
+    {
+      "id": 12,
+      "imgUrl": "mi.png"
+    },
+    {
+      "id": 13,
+      "imgUrl": "rcb_f.png"
+    },
+    {
+      "id": 14,
+      "imgUrl": "rcb.png"
+    },
+    {
+      "id": 15,
+      "imgUrl": "rr_f.png"
+    },
+    {
+      "id": 16,
+      "imgUrl": "rr.png"
+    },
+    {
+      "id": 17,
+      "imgUrl": "srh_f.png"
+    },
+    {
+      "id": 18,
+      "imgUrl": "srh.png"
+    }
+  ]
+}

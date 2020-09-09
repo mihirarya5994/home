@@ -1,0 +1,244 @@
+<div class="prizes-component">
+  <div class="tabs">
+    <div
+      class="tab"
+      *ngFor="let tab of tabs"
+      [class.active]="activeTab.id === tab.id"
+      (click)="setTab(tab)"
+    >
+      {{ tab.title }}
+    </div>
+  </div>
+  <!-- <div class="filter-tab d-flex">
+    <form [formGroup]="FilterForm">
+      <select formControlName="selected">
+        <option value="All">All</option>
+        <option value="Engagements">All</option>
+        <option value="Brands">All</option>
+      </select>
+    </form>
+  </div> -->
+  <!-- Filtering in the side menu -->
+
+  <div class="top">
+    <div class="all" *ngIf="all && !loading">All ({{ totalCoupons }})</div>
+    <div class="selected" *ngIf="!all" (click)="close(0, 3, input)">
+      Clear All
+    </div>
+
+    <div
+      class="filter-apply-btn"
+      [class.filter]="showContents"
+      (click)="showHideFilter()"
+      *ngIf="!loading"
+    >
+      Filter<i
+        *ngIf="!showContents"
+        class="fa fa-chevron-down"
+        aria-hidden="true"
+      ></i>
+      <i *ngIf="showContents" class="fa fa-chevron-up" aria-hidden="true"></i>
+      <!-- <div class="filters">
+      Paytm (2)
+     </div> -->
+    </div>
+  </div>
+  <div class="selected">
+    <div class="text" *ngFor="let option of brands; let i = index">
+      <div class="brandfilters" *ngIf="option.selected && showAll">
+        <i (click)="close(i, 0, option)" class="fas fa-times"></i>
+        {{ option.name }} ({{ option.count }})
+      </div>
+    </div>
+    <div class="text" *ngFor="let option of engagements; let i = index">
+      <div class="engagementfilters" *ngIf="option.selected && showAll">
+        <i (click)="close(i, 1, option)" class="fas fa-times"></i>
+        {{ option.name }} ({{ option.count }})
+      </div>
+    </div>
+    <div class="text" *ngFor="let option of categories; let i = index">
+      <div class="categoryfilters" *ngIf="option.selected && showAll">
+        <i (click)="close(i, 2, option)" class="fas fa-times"></i>
+        {{ option.name }} ({{ option.count }})
+      </div>
+    </div>
+  </div>
+  <!-- *ngIf="showFilters" -->
+
+  <div class="filter-menu" *ngIf="showContents">
+    <div class="option-menu">
+      <div class="header" (click)="showHideCategories()">
+        Category
+        <i
+          *ngIf="showCategories"
+          class="fa fa-chevron-up"
+          aria-hidden="true"
+        ></i>
+        <i
+          *ngIf="!showCategories"
+          class="fa fa-chevron-down"
+          aria-hidden="true"
+        ></i>
+      </div>
+      <ul class="list category" *ngIf="showCategories">
+        <li
+          *ngFor="let option of categories"
+          (click)="renderCoupons(2, option.name, option)"
+          [class.selected]="option.selected"
+        >
+          {{ option.name }} ({{ option.count }})
+        </li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div class="option-menu">
+      <div class="header" (click)="showHideBrands()">
+        Brands
+        <i *ngIf="showBrands" class="fa fa-chevron-up" aria-hidden="true"></i>
+        <i
+          *ngIf="!showBrands"
+          class="fa fa-chevron-down"
+          aria-hidden="true"
+        ></i>
+      </div>
+      <ul class="list" *ngIf="showBrands">
+        <li
+          *ngFor="let option of brands"
+          (click)="renderCoupons(0, option.name, option)"
+          [class.selected]="option.selected"
+        >
+          {{ option.name }} ({{ option.count }})
+        </li>
+      </ul>
+    </div>
+    <hr />
+
+    <div class="option-menu">
+      <div class="header" (click)="showHideEngagements()">
+        Engagements
+        <i
+          *ngIf="showEngagements"
+          class="fa fa-chevron-up"
+          aria-hidden="true"
+        ></i>
+        <i
+          *ngIf="!showEngagements"
+          class="fa fa-chevron-down"
+          aria-hidden="true"
+        ></i>
+      </div>
+      <ul class="list" *ngIf="showEngagements">
+        <li
+          *ngFor="let option of engagements"
+          (click)="renderCoupons(1, option.name, option)"
+          [class.selected]="option.selected"
+        >
+          {{ option.name }} ({{ option.count }})
+        </li>
+      </ul>
+    </div>
+    <hr />
+  </div>
+  <div class="content" [class.hidden]="activeTab.id !== 1">
+    <div class="loading-prizes" *ngIf="!currentWinnings.length && !loading">
+      <div class="gift-card">
+        <img src="assets/images/prizes/ellipse.png" />
+        <img class="gift" src="assets/images/prizes/gift-card.png" />
+      </div>
+      <div class="text" *ngIf="!loading">
+        <span style="margin-left: 16%;">Prizes on your way </span> <br />
+        <span>Explore JioEngage and win! </span>
+      </div>
+    </div>
+    <div class="loading-prizes" *ngIf="!currentWinnings.length">
+      <div class="gift-card">
+        <img src="assets/images/prizes/ellipse.png" />
+        <img class="gift" src="assets/images/prizes/gift-card.png" />
+      </div>
+      <div class="text" *ngIf="loading">Loading your winnings…</div>
+    </div>
+    <div class="winning-content" *ngIf="currentWinnings.length">
+      <div class="item" *ngFor="let item of currentWinnings">
+        <div class="img-wrap">
+          <img
+            src="{{ item.img }}"
+            style="max-height: 100%; max-width: 100%;"
+          />
+        </div>
+        <div class="details">
+          <div class="title">{{ item.name }}</div>
+          <div class="desc">{{ item.desc }}</div>
+          <div class="code-wrap">
+            <div class="code">{{ item.couponCode }}</div>
+
+            <div class="expiry" *ngIf="!item.couponExpired">
+              <div class="text">Expiry Date</div>
+              <div class="date">{{ item.expiryDate | date: "d MMM yyyy" }}</div>
+            </div>
+
+            <div class="expiry expired" *ngIf="item.couponExpired">
+              <div class="text">Expired</div>
+            </div>
+          </div>
+          <div class="btn-wrap" *ngIf="item.couponExpired">
+            <button *ngIf="!item.selected" [class.disabled]="!item.selected">
+              copy
+            </button>
+            <button
+              class="claim"
+              *ngIf="!item.claimUrl"
+              [class.disabled]="!item.claimUrl"
+            >
+              claim
+            </button>
+            <button
+              class="claim"
+              *ngIf="item.claimUrl"
+              [class.disabled]="item.claimUrl"
+            >
+              claim
+            </button>
+          </div>
+          <div class="btn-wrap" *ngIf="!item.couponExpired">
+            <button
+              style="width:80px"
+              *ngIf="!item.selected"
+              (click)="copy(item.couponCode, item)"
+            >
+              copy
+            </button>
+            <button
+              style="width:80px"
+              *ngIf="item.selected"
+              [class.copied]="item.selected"
+            >
+              Copied
+            </button>
+            <button
+              class="claim"
+              *ngIf="item.isClaimUrlPresent"
+              (click)="claim(item)"
+            >
+              claim
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class=" ads ">
+              <app-ads [adId]=" 'e1446dd5' " [size]=" 'banner' "></app-ads>
+          </div> -->
+  <!-- <div class="bg" *ngIf="showContents">
+
+  </div> -->
+</div>
+
+<!-- <app-loader *ngIf="loading"></app-loader> -->
+
+<!-- <div class=" copy-message " (click)=" closeCopyMessage() " *ngIf=" showCopyMessage ">
+  Copied
+</div> -->

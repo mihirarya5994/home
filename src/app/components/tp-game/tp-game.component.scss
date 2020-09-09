@@ -1,0 +1,15 @@
+.tp-game-component {
+  position: absolute;
+  top: 0;
+  bottom: 30px;
+  right: 0;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  overflow-y: auto;
+  .game-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}

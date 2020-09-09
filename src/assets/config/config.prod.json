@@ -1,0 +1,13 @@
+{
+  "API_HOST": "https://ipldevapi1.jiokhelo.com",
+  "SCORE_API": "https://fantasy.jiokhelo.com/api",
+  "PROFILE_API_HOST": "https://centraluserapi.jiokhelo.com",
+  "CONTENT_HOST": "http://localhost:3000",
+  "LOGS_ENABLED": true,
+  "LEADERBOARD_HOST": "https://ipl12.jiokhelo.com",
+  "COUPON_API_HOST": "https://couponapi.jioengageapps.com/coupon/api",
+  "SHARE_MESSAGE": "Are you ready to score big this world cup season ? I am playing Jio Cricket Play Along, Click here to join me on MyJio. Click here www.jio.com/jcpa #KheloCricketJioCricket",
+  "HOW_TO_PLAY_URL": "https://www.jio.com/en-in/apps/jio-cricket-play-along#section0",
+  "FAQ_URL": "https://www.jio.com/en-in/apps/jio-cricket-play-along#section13",
+  "TNC_URL": "https://www.jio.com/en-in/apps/jio-cricket-play-along#tnc"
+}

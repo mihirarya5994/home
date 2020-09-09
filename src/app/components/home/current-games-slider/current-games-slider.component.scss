@@ -1,0 +1,45 @@
+.banners-component {
+  height: 37%;
+  width: 100%;
+  margin-top: 3%;
+  // padding-bottom: 2%;
+  // border-bottom: 1px solid #d8d8d8;
+  @media (min-width: 411px) {
+    height: 40%;
+  }
+  @media screen and (min-device-height: 800px) {
+    height: 30%;
+  }
+
+  &.hidden {
+    visibility: hidden;
+  }
+
+  .slider {
+    height: 100%;
+    width: 100%;
+
+    .slide {
+      width: 90%;
+      padding: 0.5rem;
+      height: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .timer {
+        font-family: "montserrat-extraBold";
+        color: white;
+        position: absolute;
+        bottom: 10px;
+        left: 120px;
+        .game-start {
+          color: #00ffc0;
+          font-family: "montserrat-extraBold";
+        }
+      }
+    }
+  }
+}

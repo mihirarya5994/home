@@ -1,0 +1,32 @@
+<div
+  class="dashboard-component"
+  *ngIf="!loading"
+  [class.no-header]="userInfo.header"
+  [class.isAndroid]="device === 'android'"
+  [class.isIos]="device === 'ios'"
+>
+  <app-current-games-slider [data]="latestGames"></app-current-games-slider>
+  <app-horizontal-list
+    [data]="recommended"
+    [source]="type"
+  ></app-horizontal-list>
+  <app-fun-games [data]="data.thirdPartyGames"></app-fun-games>
+
+  <app-vertical-list [data]="data.info" [source]="type"></app-vertical-list>
+  <!-- <app-horizontal-list
+    [likedApps]="favouriteApps"
+    [data]="data.recommended"
+    (like)="likeApp($event)"
+    (dislike)="dislikeApp($event)"
+  ></app-horizontal-list> -->
+  <!-- <app-horizontal-list
+    [data]="appsData"
+    [likedApps]="favouriteApps"
+    [showFavouriteApps]="true"
+    (dislike)="dislikeApp($event)"
+  ></app-horizontal-list> -->
+</div>
+
+<div class="dashboard-component" *ngIf="loading">
+  <app-loader></app-loader>
+</div>

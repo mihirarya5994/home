@@ -1,0 +1,207 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.horizonatl-list-component {
+  width: 100%;
+
+  margin-top: 3%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 2% 3% 0 3%;
+    .title {
+      font-weight: 700;
+      font-family: montserrat-bold;
+
+      color: #6c6c6c;
+    }
+
+    .text {
+      color: #029f08;
+    }
+  }
+  .engageItems {
+    display: flex;
+    overflow-x: auto;
+    border-bottom: 1px solid #d8d8d8;
+    padding-left: 2%;
+
+    .buttonItems {
+      font-family: montserrat-bold;
+      font-size: 1.1rem !important;
+      min-width: max-content;
+      padding: 2% 2% 0% 2%;
+      color: #707070;
+      margin-left: 1%;
+      margin-right: 1%;
+
+      &.active {
+        color: rgb(113, 0, 174);
+        font-family: montserrat-extraBold;
+        border-bottom: 4px solid rgb(113, 0, 174);
+      }
+    }
+  }
+  .list-content {
+    display: flex;
+    text-align: center;
+    overflow-x: auto;
+
+    .game {
+      padding: 3%;
+      flex: 0 0 20%;
+      padding: 2%;
+      .img-wrap {
+        min-width: 108px;
+
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+          width: 7rem;
+          height: 7rem;
+        }
+        .like-img {
+          position: absolute;
+          top: 0;
+          right: 0.4rem;
+          z-index: 1;
+          img {
+            z-index: -1;
+            width: 2.3rem;
+            height: 2.3rem;
+          }
+        }
+      }
+
+      .title {
+        text-align: center;
+        font-family: montserrat-bold;
+        font-size: 12px !important;
+        color: black;
+        margin-top: 5%;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+      }
+
+      .prize-text {
+        color: #00a69a;
+      }
+      .description {
+        margin-left: 8%;
+      }
+    }
+
+    .text {
+      font-family: montserrat-bold;
+      width: 100%;
+      font-size: 0.789rem !important;
+
+      padding: 4%;
+    }
+  }
+
+  .slider {
+    display: flex;
+    margin-top: 4%;
+    overflow-x: auto;
+    .slide {
+      flex: 0 0 20%;
+      padding: 2%;
+      padding-bottom: 4%;
+      text-align: center;
+
+      .title {
+        margin-top: 0.5rem;
+        font-family: montserrat-bold;
+        font-size: 12px !important;
+        color: black;
+      }
+
+      .img {
+        // max-width: 108px;
+        img {
+          width: 7rem;
+          height: 7rem;
+        }
+      }
+
+      .description {
+        font-family: montserrat-medium;
+        color: #707070;
+        line-height: 1.1;
+        font-size: 0.77rem;
+        margin-top: 0.3rem;
+      }
+    }
+  }
+
+  // .slider {
+  //   margin-top: 3%;
+  //   min-height: 245px;
+  //   margin-bottom: 10%;
+  //   .slide {
+  //     width: 50%;
+  //     margin-left: 8% !important;
+  //     margin-right: 8% !important;
+  //     padding: 0.5rem;
+  //     .img {
+  //       width: 100%;
+  //       border-radius: 6%;
+  //       overflow: hidden;
+  //       .like-img {
+  //         position: absolute;
+  //         top: 0;
+  //         right: 0;
+  //       }
+  //       img {
+  //         width: 100%;
+  //         max-width: 170px;
+  //         max-height: 170px;
+  //       }
+  //     }
+  //     .title {
+  //       text-align: center;
+  //       font-size: 1.2rem;
+  //       font-family: montserrat-bold;
+  //       font-weight: bold;
+  //       letter-spacing: 1px;
+  //       text-transform: uppercase;
+  //       line-height: 1.3;
+  //     }
+  //     .prize-text {
+  //       text-align: center;
+  //       color: #00a69a;
+  //       letter-spacing: 1px;
+  //       font-size: 0.75rem;
+  //       font-family: montserrat-medium;
+  //     }
+  //     .description {
+  //       // position: absolute;
+  //       color: #005a53;
+  //       font-size: 0.9rem;
+  //       font-weight: 400;
+  //       text-align: center;
+  //       bottom: 0px;
+  //       line-height: 1.3;
+  //       text-align: center;
+  //       margin-top: 4%;
+  //       font-family: montserrat-medium;
+  //     }
+  //   }
+  // }
+
+  &.hidden {
+    display: none;
+    visibility: hidden;
+  }
+
+  &.isDashBoard {
+    // padding: 8%;s
+    background:rgba(201, 201, 201, .36);
+  }
+}
